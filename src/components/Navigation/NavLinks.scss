@@ -1,0 +1,56 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.navigation {
+  position: relative;
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  menu {
+    font-size: $font-size-md;
+    display: flex;
+    justify-content: space-between;
+    gap: 69px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    menu {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      font-size: $font-size-xxs;
+      text-transform: uppercase;
+      background: white;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    menu.open {
+      display: flex;
+    }
+  }
+}
