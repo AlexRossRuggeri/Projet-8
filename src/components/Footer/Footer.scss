@@ -1,0 +1,32 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.footer {
+  @include flex-column;
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  padding: 66px 0 29px;
+  gap: 25px;
+
+  &__logo {
+    filter: brightness(0) invert(1);
+    width: 122px;
+    height: auto;
+  }
+
+  &__text {
+    font-size: $font-size-lg;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 66px 0 58px;
+
+    &__text {
+      font-size: $font-size-xxs;
+      max-width: 135px;
+      text-align: center;
+    }
+  }
+}
