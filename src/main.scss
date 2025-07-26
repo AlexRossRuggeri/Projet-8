@@ -1,0 +1,19 @@
+@use '../src/styles/_variables.scss' as *;
+@use '../src/styles/_mixins.scss' as *;
+
+body {
+  font-family: $font-main;
+  margin: 0 auto;
+  max-width: 1440px;
+  line-height: 1.5;
+  font-weight: $primary-font-weight;
+}
+
+main {
+  @include flex-column;
+  margin: 50px 100px;
+
+  @media (max-width: 768px) {
+    margin: 27px 20px;
+  }
+}
