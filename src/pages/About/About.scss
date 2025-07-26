@@ -1,0 +1,18 @@
+.about {
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  &__photo {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__text {
+    flex: 1;
+  }
+}
