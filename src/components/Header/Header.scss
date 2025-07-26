@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+header {
+  @include flex-space-between;
+  align-items: center;
+
+  .logo-ruggeri {
+    width: 150px;
+    height: auto;
+  }
+}
